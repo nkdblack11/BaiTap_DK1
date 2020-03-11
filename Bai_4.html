@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài4</title>
+    <script>
+        function tim_so(so1,so2,so3) {
+            let _so1 = parseInt(so1)
+            let _so2 = parseInt(so2)
+            let _so3 = parseInt(so3)
+            if((_so1>_so2) && (_so1 > _so3)){
+                document.write('Số' + ' ' + _so1 + ' ' + 'là số lớn nhất')
+            }else if ((_so2 > _so3) && (_so2 > _so1)){
+                document.write('Số' + ' ' + _so2 + ' ' + 'là số lớn nhất')
+            }else {
+                document.write('Số' + ' ' + _so3 + ' ' + 'là số lớn nhất')
+            }
+        }
+    </script>
+</head>
+<body>
+<h3>Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</h3>
+<input id="so1" type="text"/>
+<input id="so2" type="text"/>
+<input id="so3" type="text"/>
+<button type="button" onclick="xuat.innerHTML=tim_so(so1.value,so2.value,so3.value)">Tính</button>
+<div id="xuat"></div>
+</body>
+</html>
