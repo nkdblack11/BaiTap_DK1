@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Bài6</title>
+    <script>
+        function tinh_thuong(doanhthu) {
+            let dt = parseInt(doanhthu)
+            let tt = ''
+            if (dt > 99999999){
+                if ((dt*15)/100){
+                    document.write(tt)
+                }
+            }else if (dt<99999999){
+                if ((dt*10)/100){
+                    document.write(tt)
+                }
+            }else if (dt<500000000){
+                if ((dt*5)/100){
+                    document.write(tt)
+                }
+            }else {
+                document.write('Không có Hoa Hồng')
+            }
+            return tt
+        }
+    </script>
 </head>
 <body>
-
+<h2>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h2>
+<p>Doanh thu</p>
+<input id="doanhthu" type="text"/>
+<button type="button" onclick="xuat.value=tinh_thuong(doanhthu.value)">Tính</button>
+<div id="xuat"></div>
 </body>
 </html>
