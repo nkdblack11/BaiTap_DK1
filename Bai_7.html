@@ -5,25 +5,20 @@
     <title>Bài7</title>
     <script>
         function tinh_cuoc(so1, so2) {
+            console.log(so1,so2)
             let _so1 = parseInt(so1)
             let _so2 = parseInt(so2)
-            let nm = 800
-            let lm = 1200
-            let _nm = parseInt(nm)
-            let _lm = parseInt(lm)
             let kq1 = ""
             let kq2 = ""
-            let kq = kq1 + kq2
-            if (_nm) {
-                if (_so1 * 800) {
-                    document.getElementById('xuat').innerHTML = kq1
-                }
-            } else if (_lm) {
-                if (_so2 * 1200) {
-                    document.getElementById('xuat').innerHTML = kq2
-                }
+            if (_so1) {
+                kq1 = _so1 * 800
+                document.getElementById('xuat_noi').innerHTML = 'Giá cước nội mạng' + " " + kq1
+            }if (_so2) {
+                kq2 = _so2 * 1200
+                document.getElementById('xuat_ngoai').innerHTML = 'Giá cước ngoại mạng ' + " " + kq2
             }
-            document.getElementById('xuat').innerHTML = kq
+            let kq = kq1 + kq2
+            document.getElementById('xuat').innerHTML = 'Tông Tiền Cước ' + " " + kq
         }
     </script>
 </head>
@@ -37,6 +32,8 @@
 <p>Số phút ngọi ngoại mạng</p>
 <input id="so2" type="text"/>
 <button type="button" onclick="xuat.value=tinh_cuoc(so1.value,so2.value)">Tính</button>
+<div id="xuat_noi"></div>
+<div id="xuat_ngoai"></div>
 <div id="xuat"></div>
 </body>
 </html>
