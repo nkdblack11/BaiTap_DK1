@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài7</title>
+    <script>
+        function tinh_cuoc(so1, so2) {
+            let _so1 = parseInt(so1)
+            let _so2 = parseInt(so2)
+            let nm = 800
+            let lm = 1200
+            let _nm = parseInt(nm)
+            let _lm = parseInt(lm)
+            let kq1 = ""
+            let kq2 = ""
+            let kq = kq1 + kq2
+            if (_nm) {
+                if (_so1 * 800) {
+                    document.getElementById('xuat').innerHTML = kq1
+                }
+            } else if (_lm) {
+                if (_so2 * 1200) {
+                    document.getElementById('xuat').innerHTML = kq2
+                }
+            }
+            document.getElementById('xuat').innerHTML = kq
+        }
+    </script>
+</head>
+<body>
+<h2>Thông số cước điện thoại</h2>
+<p>Nội mạng: 800d/phút</p>
+<p>Ngoại mạng : 1200d/phút</p>
+<h2>Tính cước điện thoại cho một hộ gia đình</h2>
+<p>Số phút ngọi nội mạng</p>
+<input id="so1" type="text"/>
+<p>Số phút ngọi ngoại mạng</p>
+<input id="so2" type="text"/>
+<button type="button" onclick="xuat.value=tinh_cuoc(so1.value,so2.value)">Tính</button>
+<div id="xuat"></div>
+</body>
+</html>
