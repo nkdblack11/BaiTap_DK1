@@ -8,15 +8,15 @@
             let _gk = parseInt(giuaky)
             let _ck = parseInt(cuoiky)
             let dtb = (_gk + (_ck * 2)) / 3
-            if (dtb <= 10) {
+            if ((dtb <= 10) && (_gk <= 10) && (_ck <= 10)) {
                 if (dtb > 9) {
-                    document.write('Giỏi')
+                    document.write('Học Lực Giỏi')
                 } else if (dtb > 6) {
-                    document.write('Khá')
+                    document.write('Học Lực Khá')
                 } else if (dtb > 4) {
-                    document.write('Trung Bình')
+                    document.write('Học Lực Trung Bình')
                 } else {
-                    document.write('Yếu')
+                    document.write('Học Lực Yếu')
                 }
             }
         }
