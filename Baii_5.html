@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+    <script>
+        function Xet_hoc_luc(giuaky, cuoiky) {
+            let _gk = parseInt(giuaky)
+            let _ck = parseInt(cuoiky)
+            let dtb = (_gk + (_ck * 2)) / 3
+            if (dtb <= 10) {
+                if (dtb > 9) {
+                    document.write('Giỏi')
+                } else if (dtb > 6) {
+                    document.write('Khá')
+                } else if (dtb > 4) {
+                    document.write('Trung Bình')
+                } else {
+                    document.write('Yếu')
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<p>Điểm thi giữa kỳ</p>
+<input id="giuaky" type="text"/>
+<p>Điểm thi Cuối Kỳ</p>
+<input id="cuoiky" type="text"/>
+<button type="button" onclick="xuat.value=Xet_hoc_luc(giuaky.value,cuoiky.value)">Tính</button>
+<div id="xuat"></div>
+</body>
+</html>
