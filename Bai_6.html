@@ -6,21 +6,26 @@
     <script>
         function tinh_thuong(doanhthu) {
             let dt = parseInt(doanhthu)
-            let tt = ''
-            if (dt > 99999999){
-                if ((dt*15)/100){
-                    document.write(tt)
+            let tt1 = ((dt * 15) / 100)
+            let tt2 = ((dt * 10) / 100)
+            let tt3 = ((dt * 5) / 100)
+            let _tt1 = parseInt(tt1)
+            let _tt2 = parseInt(tt2)
+            let _tt3 = parseInt(tt3)
+            if (dt > 100000000) {
+                if ((dt * 15) / 100) {
+                    document.getElementById('xuat').innerHTML = 'Tiền thưởng doang thu là' + ' ' + _tt1
                 }
-            }else if (dt<99999999){
-                if ((dt*10)/100){
-                    document.write(tt)
+            } else if (dt < 99999999) {
+                if ((dt * 10) / 100) {
+                    document.getElementById('xuat').innerHTML = 'Tiền thưởng doang thu là' + ' ' + _tt2
                 }
-            }else if (dt<500000000){
-                if ((dt*5)/100){
-                    document.write(tt)
+            } else if (dt < 50000000) {
+                if ((dt * 5) / 100) {
+                    document.getElementById('xuat').innerHTML = 'Tiền thưởng doang thu là' + ' ' + _tt3
+                } else {
+                    document.getElementById('xuat').innerHTML = 'số nhập ko hợp lệ'
                 }
-            }else {
-                document.write('Không có Hoa Hồng')
             }
             return tt
         }
