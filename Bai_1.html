@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài1</title>
+</head>
+<body>
+<script>
+    function tinh(so1,so2) {
+        if (so1 % so2 == 0) {
+            document.write('Số chia hết')
+        } else {
+            document.write('Số không chia hết')
+        }
+    }
+</script>
+<input id="so1" type="text"/>
+<input id="so2" type="text"/>
+<button type="button" id="xuat" onclick="xuat.innerHTML=tinh(so1.value,so2.value)">Tính</button>
+</body>
+</html>
